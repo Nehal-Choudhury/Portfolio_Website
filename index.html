@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cybersecurity portfolio of MD Mahbubul Bashar Choudhury (Nehal) — CEH, Red Teaming, OSINT, CTF, VAPT and Web Security." />
+  <title>Nehal | Cybersecurity Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <canvas id="matrixCanvas" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <nav class="navbar container">
+      <a href="#home" class="logo" aria-label="Go to home">
+        <span class="logo-mark">&gt;_</span>
+        <span>NEHAL</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certificates</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero section-padding">
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <p class="eyebrow">CEH • Red Teaming • OSINT • VAPT • CTF</p>
+          <h1>NEHAL CHOUDHURY</h1>
+          <h2 class="hero-subtitle">Cybersecurity Enthusiast | Red Teamer | CTF Player | OSINT</h2>
+
+          <div class="terminal-card" role="region" aria-label="Animated terminal intro">
+            <div class="terminal-top">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="terminal-title">nehal@portfolio:~</span>
+            </div>
+            <div class="terminal-body">
+              <p><span class="prompt">$</span> whoami</p>
+              <p class="terminal-output">Offensive security learner focused on ethical hacking, vulnerability assessment, web security testing, CTFs, reconnaissance, enumeration, exploitation, and privilege escalation.</p>
+              <p><span class="prompt">$</span> <span id="typedText"></span><span class="cursor">|</span></p>
+            </div>
+          </div>
+
+          <div class="hero-buttons">
+            <a class="btn primary" href="assets/MD_MAHBUBUL_BASHAR_CHOUDHURY_CV.pdf" download>Download CV</a>
+            <a class="btn secondary" href="#projects">View Projects</a>
+            <a class="btn ghost" href="#contact">Contact Me</a>
+          </div>
+
+          <div class="quick-stats" aria-label="Quick profile stats">
+            <div>
+              <strong class="counter-value" data-target="40">0</strong>
+              <span>PicoCTF Writeups</span>
+            </div>
+            <div>
+              <strong class="counter-value" data-target="25">0</strong>
+              <span>Juice Shop Findings</span>
+            </div>
+            <div>
+              <strong class="counter-value" data-target="5">0</strong>
+              <span>Security Projects</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile-panel reveal">
+          <div class="profile-frame">
+            <img src="assets/Nehal.jpeg" alt="Profile placeholder for Nehal" />
+            <div class="scan-line"></div>
+          </div>
+          <div class="profile-meta">
+            <p class="mono">STATUS: <span>OPEN_TO_SECURITY_ROLES</span></p>
+            <p class="mono">LOCATION: WINDSOR_MILL_MD</p>
+            <p class="mono">FOCUS: RED_TEAMING / OSINT / VAPT</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section-padding">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">About</p>
+          <h2>Security-minded, hands-on, and documentation focused.</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="glass-card reveal">
+            <h3>Profile Summary</h3>
+            <p>
+              Cybersecurity enthusiast with practical experience in offensive security, ethical hacking,
+              and vulnerability assessment through hands-on labs, CTF challenges, and web security testing.
+              Skilled in reconnaissance, enumeration, vulnerability exploitation, and privilege escalation
+              across Linux and web environments.
+            </p>
+            <p>
+              Comfortable using industry-standard tools including Nmap, Gobuster, Dirb, Burp Suite,
+              Metasploit, Maltego, WHOIS, and DNS enumeration, with strong interest in red teaming,
+              OSINT, and real-world security assessment workflows.
+            </p>
+          </div>
+
+          <div class="command-list reveal">
+            <div class="command-item"><span>&gt;</span> Reconnaissance and enumeration</div>
+            <div class="command-item"><span>&gt;</span> Web exploitation and API testing</div>
+            <div class="command-item"><span>&gt;</span> Linux privilege escalation</div>
+            <div class="command-item"><span>&gt;</span> CTF challenge writeups</div>
+            <div class="command-item"><span>&gt;</span> VAPT reporting and remediation notes</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section-padding alt-section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Skills</p>
+          <h2>Technical skill map</h2>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card reveal">
+            <h3>Offensive Security</h3>
+            <ul>
+              <li>Penetration Testing</li>
+              <li>Vulnerability Analysis</li>
+              <li>Exploitation Basics</li>
+              <li>Privilege Escalation</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <h3>Recon & OSINT</h3>
+            <ul>
+              <li>OSINT</li>
+              <li>Footprinting</li>
+              <li>Reconnaissance</li>
+              <li>Network Scanning</li>
+              <li>Enumeration</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <h3>Network Security</h3>
+            <ul>
+              <li>Packet Sniffing</li>
+              <li>Wireless Network Security</li>
+              <li>IDS/Firewall Evasion</li>
+              <li>Threat Analysis</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <h3>Web Security</h3>
+            <ul>
+              <li>Web Application Security</li>
+              <li>SQL Injection</li>
+              <li>XSS</li>
+              <li>Session Hijacking</li>
+              <li>Authentication Bypass</li>
+              <li>Broken Access Control</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <h3>Tools</h3>
+            <ul>
+              <li>Nmap</li>
+              <li>Gobuster</li>
+              <li>Dirb</li>
+              <li>Burp Suite</li>
+              <li>Metasploit</li>
+              <li>Maltego</li>
+              <li>WHOIS</li>
+              <li>DNS Enumeration</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <h3>Other</h3>
+            <ul>
+              <li>Malware Analysis</li>
+              <li>Cryptography Basics</li>
+              <li>Security Scripting</li>
+              <li>CTF Problem Solving</li>
+              <li>Technical Writeups</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section-padding">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Experience</p>
+          <h2>Cybersecurity experience and training</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-card reveal">
+            <div class="timeline-dot"></div>
+            <p class="date">09/2025 – 02/2026 • Remote</p>
+            <h3>Cyber Security and Ethical Hacker Intern</h3>
+            <h4>Creative IT Institute</h4>
+            <ul>
+              <li>Performed hands-on security assessments on Linux and web targets through boot-to-root labs, web exploitation exercises, and CTF-based problem solving.</li>
+              <li>Conducted reconnaissance and vulnerability discovery using Nmap, Gobuster, Dirb, and Burp Suite.</li>
+              <li>Exploited SQL injection, XSS, arbitrary file write, authentication bypass, and broken access control in controlled environments.</li>
+              <li>Practiced privilege escalation through kernel exploit analysis, SUID binary analysis, credential recovery, and reverse shell access.</li>
+              <li>Produced technical writeups for lab exercises and 40+ PicoCTF challenges.</li>
+            </ul>
+          </article>
+
+          <article class="timeline-card reveal">
+            <div class="timeline-dot"></div>
+            <p class="date">10/2024 – 06/2025 • Dhaka, Bangladesh</p>
+            <h3>Certified Ethical Hacker Training</h3>
+            <h4>Creative IT Institute</h4>
+            <ul>
+              <li>Completed Cyber Ethical Hacker program.</li>
+              <li>Covered reconnaissance, scanning, enumeration, vulnerability analysis, exploitation, system hacking, malware analysis, sniffing, social engineering, web security, wireless hacking, IDS/firewall evasion, cryptography, and scripting.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="additional-experience reveal">
+          <h3>Additional Experience</h3>
+          <div class="tag-cloud">
+            <span>Chef and Customer Handling — Buffalo Wild Wings</span>
+            <span>Sales Associate — Jewelry Hut Design</span>
+            <span>Chief Human Resources Officer — AlignDots</span>
+            <span>Head of Photography — ZZAEN</span>
+            <span>Head Photographer — Chowdhury Car House</span>
+            <span>Freelance Editor — Navana Real Estate Ltd.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section-padding alt-section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Projects</p>
+          <h2>Security labs, reports, and CTF work</h2>
+        </div>
+
+        <div class="filter-bar reveal" aria-label="Project filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="ctf">CTF</button>
+          <button class="filter-btn" data-filter="web">Web Security</button>
+          <button class="filter-btn" data-filter="vapt">VAPT</button>
+          <button class="filter-btn" data-filter="privilege">Privilege Escalation</button>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card reveal" data-category="ctf privilege">
+            <div class="project-top">
+              <span class="project-icon">▣</span>
+              <span class="date">02/2026</span>
+            </div>
+            <h3>MATRIX-BREAKOUT: 2 MORPHEUS</h3>
+            <p class="project-type">Boot-to-Root CTF Challenge</p>
+            <p>Compromised a vulnerable CTF machine through full boot-to-root exploitation.</p>
+            <ul>
+              <li>Nmap and Gobuster reconnaissance.</li>
+              <li>Arbitrary file write exploitation using Burp Suite.</li>
+              <li>PHP reverse shell for initial access.</li>
+              <li>Dirty Pipe CVE-2022-0847 privilege escalation.</li>
+            </ul>
+            <div class="project-tags">
+              <span>CTF</span><span>Burp Suite</span><span>Dirty Pipe</span>
+            </div>
+            <a href="https://github.com/Nehal-Choudhury/MATRIX-BREAKOUT-2-MORPHEUS" target="_blank" rel="noreferrer" class="project-github">
+              <svg viewBox="0 0 24 24" class="github-icon">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+              <span>View on GitHub</span>
+            </a>
+          </article>
+
+          <article class="project-card reveal" data-category="ctf privilege">
+            <div class="project-top">
+              <span class="project-icon">◇</span>
+              <span class="date">01/2026</span>
+            </div>
+            <h3>The Planet: Earth Complete Vulnerability Report</h3>
+            <p class="project-type">Boot-to-Root Security Lab</p>
+            <p>Performed full boot-to-root compromise through enumeration, credential recovery, and privilege escalation.</p>
+            <ul>
+              <li>Nmap and Dirb enumeration.</li>
+              <li>XOR payload decoding for credential recovery.</li>
+              <li>Base64-encoded Netcat reverse shell.</li>
+              <li>Custom SUID binary analysis with ltrace.</li>
+            </ul>
+            <div class="project-tags">
+              <span>Linux</span><span>SUID</span><span>Reverse Shell</span>
+            </div>
+            <a href="https://github.com/Nehal-Choudhury/The-Planets-Earth-Report" target="_blank" rel="noreferrer" class="project-github">
+              <svg viewBox="0 0 24 24" class="github-icon">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+              <span>View on GitHub</span>
+            </a>
+          </article>
+
+          <article class="project-card reveal" data-category="web">
+            <div class="project-top">
+              <span class="project-icon">⌁</span>
+              <span class="date">12/2025</span>
+            </div>
+            <h3>Project Juice-Shop</h3>
+            <p class="project-type">Web Application Security Assessment</p>
+            <p>Conducted hands-on security assessment of OWASP Juice Shop and identified/exploited 25+ web vulnerabilities.</p>
+            <ul>
+              <li>Manual SQL Injection and XSS testing.</li>
+              <li>Access control exploitation.</li>
+              <li>Burp Suite HTTP request manipulation.</li>
+              <li>API abuse and OSINT/metadata analysis.</li>
+            </ul>
+            <div class="project-tags">
+              <span>Web Security</span><span>SQLi</span><span>XSS</span>
+            </div>
+            <a href="https://github.com/Nehal-Choudhury/Juice-Shop-Report" target="_blank" rel="noreferrer" class="project-github">
+              <svg viewBox="0 0 24 24" class="github-icon">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+              <span>View on GitHub</span>
+            </a>
+          </article>
+
+          <article class="project-card reveal" data-category="ctf web">
+            <div class="project-top">
+              <span class="project-icon">⌘</span>
+              <span class="date">11/2025</span>
+            </div>
+            <h3>PicoCTF Challenge Writeup</h3>
+            <p class="project-type">CTF / Cybersecurity Lab</p>
+            <p>Solved and documented 40+ PicoCTF challenges across web security, digital forensics, cryptography, and debugging.</p>
+            <ul>
+              <li>SQLi, SSTI, and client-side authentication bypass.</li>
+              <li>Forensic analysis and metadata extraction.</li>
+              <li>Cipher decoding and hash cracking.</li>
+            </ul>
+            <div class="project-tags">
+              <span>CTF</span><span>Forensics</span><span>Crypto</span>
+            </div>
+            <a href="https://github.com/Nehal-Choudhury/Pico-CTF-Report" target="_blank" rel="noreferrer" class="project-github">
+              <svg viewBox="0 0 24 24" class="github-icon">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+              <span>View on GitHub</span>
+            </a>
+          </article>
+
+          <article class="project-card reveal" data-category="vapt privilege">
+            <div class="project-top">
+              <span class="project-icon">⬡</span>
+              <span class="date">09/2025</span>
+            </div>
+            <h3>VAPT Report on Metasploitable2</h3>
+            <p class="project-type">Network and Web Reconnaissance Module</p>
+            <p>Conducted end-to-end vulnerability assessment and penetration testing on a simulated target using OWASP, NIST SP 800-115, and PTES methodologies.</p>
+            <ul>
+              <li>Nmap, Metasploit, Maltego, WHOIS, and DNS enumeration.</li>
+              <li>Identified RCE, privilege escalation, weak crypto, and vsFTPd 2.3.4 backdoor.</li>
+              <li>Achieved root access and prepared risk/remediation report.</li>
+            </ul>
+            <div class="project-tags">
+              <span>VAPT</span><span>Metasploit</span><span>PTES</span>
+            </div>
+            <a href="https://github.com/Nehal-Choudhury/VAPT-Report-on-Metasploitable2" target="_blank" rel="noreferrer" class="project-github">
+              <svg viewBox="0 0 24 24" class="github-icon">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+              <span>View on GitHub</span>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications" class="section-padding">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Certifications</p>
+          <h2>Training and certificates</h2>
+        </div>
+
+        <div class="cert-grid">
+          <div class="cert-card reveal">Certified Ethical Hacker (CEH) — Creative IT Institute</div>
+          <div class="cert-card reveal">Google Cybersecurity — Google</div>
+          <div class="cert-card reveal">Ethical Hacker — Cisco</div>
+          <div class="cert-card reveal">Palo Alto Networks Network Security Fundamentals</div>
+          <div class="cert-card reveal">Palo Alto Networks Security Operations Fundamentals</div>
+          <div class="cert-card reveal">Threat Analysis - Cisco</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section-padding alt-section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Education</p>
+          <h2>Academic background</h2>
+        </div>
+
+        <div class="education-grid">
+          <article class="edu-card reveal">
+            <p class="date">01/2026 – Present</p>
+            <h3>Associate of Arts and Sciences - AAS, Cyber Security</h3>
+            <p>Community College of Baltimore County</p>
+            <span>Baltimore, Maryland, USA</span>
+          </article>
+
+          <article class="edu-card reveal">
+            <p class="date">2021 – 2025</p>
+            <h3>Bachelor of Science in Computer Science & Engineering</h3>
+            <p>North South University</p>
+            <span>Dhaka, Bangladesh</span>
+          </article>
+
+          <article class="edu-card reveal">
+            <p class="date">2018 – 2020</p>
+            <h3>Higher Secondary Certificate (HSC)</h3>
+            <p>Bangladesh Navy School & College</p>
+            <span>Dhaka, Bangladesh</span>
+          </article>
+
+          <article class="edu-card reveal">
+            <p class="date">2016 – 2018</p>
+            <h3>Secondary School Certificate (SSC)</h3>
+            <p>Monipur High School & College</p>
+            <span>Dhaka, Bangladesh</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section-padding">
+      <div class="container contact-grid">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Contact</p>
+          <h2>Let’s connect securely.</h2>
+          <p class="contact-intro">For cybersecurity roles, collaborations, CTF work, or project discussions, use the links below.</p>
+
+          <div class="contact-list">
+            <a class="contact-link" href="mailto:nehalclickz@gmail.com" aria-label="Email Nehal">
+              <span class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 5h16c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V7c0-1.1.9-2 2-2Z"/>
+                  <path d="m22 7-10 6L2 7"/>
+                </svg>
+              </span>
+              <div class="contact-details">
+                <span class="contact-label">Email</span>
+                <span class="contact-value">nehalclickz@gmail.com</span>
+                <span class="contact-desc">Best for formal inquiries & opportunities</span>
+              </div>
+            </a>
+
+            <a class="contact-link" href="tel:+14439096725" aria-label="Call Nehal">
+              <span class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.35 1.9.66 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.31 1.85.53 2.81.66A2 2 0 0 1 22 16.92Z"/>
+                </svg>
+              </span>
+              <div class="contact-details">
+                <span class="contact-label">Phone</span>
+                <span class="contact-value">+1 (443) 909-6725</span>
+                <span class="contact-desc">For urgent matters & direct discussion</span>
+              </div>
+            </a>
+
+            <span class="contact-link" style="cursor: default;">
+              <span class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 1 1 18 0Z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+              </span>
+              <div class="contact-details">
+                <span class="contact-label">Location</span>
+                <span class="contact-value">Windsor Mill, MD, USA</span>
+                <span class="contact-desc">Eastern Time Zone • Available for meetings</span>
+              </div>
+            </span>
+
+            <a class="contact-link" href="https://linkedin.com/in/nehal-choudhury08" target="_blank" rel="noreferrer" aria-label="Open LinkedIn profile">
+              <span class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z"/>
+                  <rect x="2" y="9" width="4" height="12"/>
+                  <circle cx="4" cy="4" r="2"/>
+                </svg>
+              </span>
+              <div class="contact-details">
+                <span class="contact-label">LinkedIn</span>
+                <span class="contact-value">Nehal Choudhury</span>
+                <span class="contact-desc">Professional network • Work history & skills</span>
+              </div>
+            </a>
+
+            <a class="contact-link" href="https://github.com/Nehal-Choudhury" target="_blank" rel="noreferrer" aria-label="Open GitHub profile">
+              <span class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                </svg>
+              </span>
+              <div class="contact-details">
+                <span class="contact-label">GitHub</span>
+                <span class="contact-value">Nehal-Choudhury</span>
+                <span class="contact-desc">Code portfolio • CTF writeups • Projects</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p class="mono">“Securing systems, one vulnerability at a time.”</p>
+      <p>© 2026 MD Mahbubul Bashar Choudhury. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
