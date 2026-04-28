@@ -479,13 +479,42 @@ h1 span {
 .skills-grid,
 .projects-grid,
 .cert-grid,
-.education-grid {
+.education-grid,
+.languages-grid {
   display: grid;
   gap: 20px;
 }
 
 .skills-grid {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
+}
+
+.languages-grid {
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.languages-grid .skill-card {
+  width: 100%;
+}
+
+.language-card {
+  border-radius: 22px;
+  padding: 40px 30px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  text-align: center;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.language-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 255, 136, 0.52);
+  box-shadow: 0 0 42px rgba(0, 255, 136, 0.18);
 }
 
 .skill-card,
